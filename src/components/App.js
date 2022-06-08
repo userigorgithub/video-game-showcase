@@ -4,14 +4,16 @@ import '../styles/App.css';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       games: []
     }
   }
 
   render() {
-    
+    return (
+      <h1>Hi</h1>
+    )
   }
 
 }
