@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Games from './Games';
 // import gameData from '../data';
 // import { fetchData } from '../apiCalls';
+import GameDetails from './GameDetails';
 
 
 class App extends Component {
