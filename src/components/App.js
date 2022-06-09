@@ -24,11 +24,11 @@ class App extends Component {
     };
     fetch('https://mmo-games.p.rapidapi.com/games', options)
 	    .then(response => {
-      console.log(response)
+      console.log('games res', response)
       return response.json()
     })
       .then(data => {
-      console.log(data)
+      console.log('games data', data)
       return this.setState({ games: data })
     })
 	  // .then(response => console.log(response))
