@@ -9,6 +9,7 @@ const Games = (props) => {
         id={game.id}
         key={game.id}
         title={game.title}
+        thumbnail={game.thumbnail}
       />
     )
   })

@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import Games from './Games';
+import gameData from '../data';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      games: [{id: 1, title: "hi"}, {id: 2, title: "bye"}]
+      games: []
     }
+  }
+
+  componentDidMount = () => {
+    this.setState({games: gameData.games})
+    console.log("games", gameData.games);
   }
 
   render() {
