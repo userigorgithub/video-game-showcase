@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <main className='app'>
-        <Games games={this.state.games} />
+        <Games allGames={this.state.games} />
       </main>
     )
   }
