@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Games from './Games';
 // import gameData from '../data';
 // import { fetchData } from '../apiCalls';
+import GameDetails from './GameDetails';
 
 
 class App extends Component {
@@ -23,11 +24,11 @@ class App extends Component {
     };
     fetch('https://mmo-games.p.rapidapi.com/games', options)
 	    .then(response => {
-      console.log(response)
+      console.log('games res', response)
       return response.json()
     })
       .then(data => {
-      console.log(data)
+      console.log('games data', data)
       return this.setState({ games: data })
     })
 	  // .then(response => console.log(response))
@@ -48,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <main className='app'>
-        <Games games={this.state.games} />
+        <Games allGames={this.state.games} />
       </main>
     )
   }
