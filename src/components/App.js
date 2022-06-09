@@ -15,23 +15,22 @@ class App extends Component {
 
   componentDidMount = () => {
     const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-		'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-	}
-};
-
-fetch('https://mmo-games.p.rapidapi.com/games', options)
-	.then(response => {
-    console.log(response)
-    return response.json()
-  })
-  .then(data => {
-    console.log(data)
-    // return this.setState({ games: data.games })
-  })
-	// .then(response => console.log(response))
+	    method: 'GET',
+	    headers: {
+		    'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
+		    'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
+	    }
+    };
+    fetch('https://mmo-games.p.rapidapi.com/games', options)
+	    .then(response => {
+      console.log(response)
+      return response.json()
+    })
+      .then(data => {
+      console.log(data)
+      return this.setState({ games: data })
+    })
+	  // .then(response => console.log(response))
   .catch(err => console.log('errrror'));
 	// .catch(err => console.error(err));
   }
