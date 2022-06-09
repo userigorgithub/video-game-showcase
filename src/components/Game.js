@@ -4,7 +4,7 @@ import '../styles/Game.css';
 const Game = (props) => {
   return (
     <div className='game'>
-      <p>HIIII</p>
+      <h2 id={props.id} className='titles'>{props.title}</h2>
     </div>
   )
 }
