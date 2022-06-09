@@ -20,7 +20,7 @@ class GameDetails extends Component {
 	}
 };
 
-fetch(`https://mmo-games.p.rapidapi.com/game/${this.props.id}`, options)
+fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
 // fetch('https://mmo-games.p.rapidapi.com/game?id=452', options)
 	.then(response => {
     console.log('single game', response)
