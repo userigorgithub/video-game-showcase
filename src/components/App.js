@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      games: []
+      games: [{id: 1, title: "hi"}, {id: 2, title: "bye"}]
     }
   }
 

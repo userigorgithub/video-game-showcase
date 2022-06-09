@@ -1,10 +1,15 @@
 import React from 'react';
 import '../styles/Games.css';
+import Game from './Game';
 
 const Games = (props) => {
   const gameCards = props.allGames.map(game => {
     return (
-      <h1>hiiii</h1>
+      <Game
+        id={game.id}
+        key={game.id}
+        title={game.title}
+      />
     )
   })
 
@@ -14,6 +19,5 @@ const Games = (props) => {
     </div>
   )
 }
-
 
 export default Games;
