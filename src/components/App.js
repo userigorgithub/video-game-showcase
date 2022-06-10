@@ -4,6 +4,7 @@ import Games from './Games';
 // import gameData from '../data';
 // import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
+import Header from './Header';
 import { Route } from 'react-router-dom';
 
 
@@ -50,6 +51,7 @@ class App extends Component {
   render() {
     return (
       <main className='app'>
+        <Header />
         <Route exact path='/' render={() => <Games allGames={this.state.games} /> } />
         <Route exact path='/:id' render={({match}) => <GameDetails id={match.params.id} /> } />
       </main>
