@@ -15,7 +15,7 @@ const Header = (props) => {
       </div>
       <div className='search-area'>
         <form>
-          <input className='search' type='text' placeholder='game title search'></input>
+          <input className='search' type='text' placeholder='search by title' value={props.query} onChange={(event) => props.searchGame(event)}></input>
         </form>
       </div>
     </div>

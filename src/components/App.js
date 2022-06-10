@@ -5,14 +5,16 @@ import Games from './Games';
 // import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
 import Header from './Header';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      games: []
+      games: [],
+      searchedGames: [],
+      query: ''
     }
   }
 
@@ -48,12 +50,32 @@ class App extends Component {
     // console.log("games", gameData.games);
   // }
 
+  searchGame = (event) => {
+    // this.setState({ query: event.target.value, searchedGames: this.state.games})
+    const result = this.state.games.filter(game => {
+      return game.title.toUpperCase().includes(event.target.value.toUpperCase())
+    })
+    this.setState({ query: event.target.value, searchedGames: result })
+  }
+
+
   render() {
     return (
       <main className='app'>
-        <Header />
-        <Route exact path='/' render={() => <Games allGames={this.state.games} /> } />
-        <Route exact path='/:id' render={({match}) => <GameDetails id={match.params.id} /> } />
+        <Header searchGame={this.searchGame} query={this.state.query} />
+        <Switch>
+          <Route exact path='/' render={() =>
+            {if (this.state.searchedGames.length) {
+              return (<Games allGames={this.state.searchedGames} />)
+            } else {
+              return (<Games allGames={this.state.games} />)
+            }}
+          } >
+          </Route>
+          <Route exact path='/:id' render={({match}) =>
+            <GameDetails id={match.params.id} /> } >
+          </Route>
+        </Switch>
       </main>
     )
   }
