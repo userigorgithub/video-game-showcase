@@ -5,6 +5,7 @@ import Games from './Games';
 // import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
 import Header from './Header';
+import ErrorMessage from './ErrorMessage';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -14,7 +15,8 @@ class App extends Component {
     this.state = {
       games: [],
       searchedGames: [],
-      query: ''
+      query: '',
+      error: false
     }
   }
 
@@ -28,16 +30,19 @@ class App extends Component {
     };
     fetch('https://mmo-games.p.rapidapi.com/games', options)
 	    .then(response => {
-      console.log('games res', response)
-      return response.json()
-    })
+        if (response.ok) {
+          return response.json()
+        } else {
+          throw new Error(response.statusText)
+        }
+      })
       .then(data => {
       console.log('games data', data)
       return this.setState({ games: data })
     })
-	  // .then(response => console.log(response))
-  .catch(err => console.log('errrror'));
-	// .catch(err => console.error(err));
+      .catch(error => {
+        this.setState({ error: true })
+      })
   }
 
   // componentDidMount = () => {
@@ -51,7 +56,6 @@ class App extends Component {
   // }
 
   searchGame = (event) => {
-    // this.setState({ query: event.target.value, searchedGames: this.state.games})
     const result = this.state.games.filter(game => {
       return game.title.toUpperCase().includes(event.target.value.toUpperCase())
     })
@@ -60,26 +64,31 @@ class App extends Component {
 
 
   render() {
-    return (
-      <main className='app'>
-        <Header searchGame={this.searchGame} query={this.state.query} />
-        <Switch>
-          <Route exact path='/' render={() =>
-            {if (this.state.searchedGames.length) {
-              return (<Games allGames={this.state.searchedGames} />)
-            } else {
-              return (<Games allGames={this.state.games} />)
-            }}
-          } >
-          </Route>
-          <Route exact path='/:id' render={({match}) =>
-            <GameDetails id={match.params.id} /> } >
-          </Route>
-        </Switch>
-      </main>
-    )
+    if (this.state.error) {
+      return (<ErrorMessage />)
+    } else {
+      return (
+        <main className='app'>
+          <Header searchGame={this.searchGame} query={this.state.query} />
+          <Switch>
+            <Route exact path='/' render={() =>
+              {if (!this.state.searchedGames.length && !this.state.query) {
+                return (<Games allGames={this.state.games} />)
+              } else if (!this.state.searchedGames.length) {
+                return (<ErrorMessage />)
+              } else {
+                return (<Games allGames={this.state.searchedGames} />)
+              }}
+            } >
+            </Route>
+            <Route exact path='/:id' render={({match}) =>
+              <GameDetails id={match.params.id} /> } >
+            </Route>
+          </Switch>
+        </main>
+      )
+    }
   }
-
 }
 
 export default App;
