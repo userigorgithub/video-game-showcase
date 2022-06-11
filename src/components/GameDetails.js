@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../styles/GameDetails.css';
-import App from './App';
+// import App from './App';
+import ErrorMessage from './ErrorMessage';
 
 
 class GameDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      game: ''
+      game: '',
+      error: false
     }
   }
 
@@ -23,24 +25,32 @@ class GameDetails extends Component {
 fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
 // fetch('https://mmo-games.p.rapidapi.com/game?id=452', options)
 	.then(response => {
-    console.log('single game', response)
-    return response.json()
+    if (response.ok) {
+      return response.json()
+    } else {
+      throw new Error(response.statusText)
+    }
   })
-
   .then(data => {
     console.log('single game data', data)
     return this.setState({ game: data })
   })
-	.catch(err => console.log('err'));
+	.catch(error => {
+    this.setState({ error: true })
+  })
 }
 
 
   render() {
-    return (
-      <div className='game-details'>
-        <h2 className='game-details-title'>Title: {this.state.game.title}</h2>
-      </div>
-    )
+    if (this.state.error) {
+      return (<ErrorMessage />)
+    } else {
+      return (
+        <div className='game-details'>
+          <h2 className='game-details-title'>Title: {this.state.game.title}</h2>
+        </div>
+      )
+    }
   }
 }
 
