@@ -7,7 +7,7 @@ const Header = (props) => {
     <div className='header'>
       <div className='home-btn-area'>
         <Link to='/'>
-          <button className='home-btn'>Home</button>
+          <button className='home-btn' onClick={() => props.clearSearchGame()}>Home</button>
         </Link>
       </div>
       <div className='title-area'>

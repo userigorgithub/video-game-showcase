@@ -62,6 +62,9 @@ class App extends Component {
     this.setState({ query: event.target.value, searchedGames: result })
   }
 
+  clearSearchGame = () => {
+    this.setState({ searchedGames: [], query: '' })
+  }
 
   render() {
     if (this.state.error) {
@@ -69,7 +72,7 @@ class App extends Component {
     } else {
       return (
         <main className='app'>
-          <Header searchGame={this.searchGame} query={this.state.query} />
+          <Header searchGame={this.searchGame} query={this.state.query} clearSearchGame={this.clearSearchGame} />
           <Switch>
             <Route exact path='/' render={() =>
               {if (!this.state.searchedGames.length && !this.state.query) {
