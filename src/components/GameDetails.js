@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../styles/GameDetails.css';
 import PropTypes from 'prop-types';
 import { fetchDataSingleGame } from '../apiCalls';
-// import App from './App';
 import ErrorMessage from './ErrorMessage';
-
 
 class GameDetails extends Component {
   constructor() {
@@ -16,16 +14,14 @@ class GameDetails extends Component {
   }
 
   componentDidMount = () => {
-  fetchDataSingleGame(`/game?id=${this.props.id}`)
-  .then(data => {
-    console.log('single game data', data)
-    return this.setState({ game: data })
-  })
-	.catch(error => {
-    this.setState({ error: true })
-  })
-}
-
+    fetchDataSingleGame(`/game?id=${this.props.id}`)
+      .then(data => {
+        return this.setState({ game: data })
+      })
+	    .catch(error => {
+      this.setState({ error: true })
+      })
+  }
 
   render() {
     if (this.state.error) {

@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import PropTypes from 'prop-types';
 import Games from './Games';
-// import gameData from '../data';
 import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorMessage from './ErrorMessage';
 import { Route, Switch } from 'react-router-dom';
-
 
 class App extends Component {
   constructor() {
@@ -25,23 +23,12 @@ class App extends Component {
   componentDidMount = () => {
     fetchData('/')
       .then(data => {
-      // console.log('games data', data)
-      return this.setState({ games: data })
-    })
+        return this.setState({ games: data })
+      })
       .catch(error => {
         this.setState({ error: true })
       })
   }
-
-  // componentDidMount = () => {
-    // fetchData()
-    // .then(response => response.json())
-    // .then(data => this.setState({games: data.games}))
-
-
-    // this.setState({games: gameData.games})
-    // console.log("games", gameData.games);
-  // }
 
   searchGame = (event) => {
     const result = this.state.games.filter(game => {
