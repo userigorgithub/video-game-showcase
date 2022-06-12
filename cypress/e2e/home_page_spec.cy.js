@@ -1,4 +1,5 @@
 describe('Home page', () => {
+  
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
     cy.intercept('GET', 'https://www.mmobomb.com/api1/games', {fixtures : 'example.json'})

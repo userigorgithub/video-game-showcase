@@ -1,7 +1,7 @@
 # Video Game Showcase
 
 ## Table of Contents
-- [Contributors](#contributor(s))
+- [Contributors](#contributors)
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Deployed Link](#deployed-link)
@@ -14,7 +14,7 @@
 - [GitHub Repo](#github-repo)
 - [Additional Resources](#additional-resources)
 
-## Contributor(s)
+## Contributors
 [Igor Decess](https://github.com/userigorgithub)
 
 ## Introduction

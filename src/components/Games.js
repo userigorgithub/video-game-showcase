@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Games.css';
+import PropTypes from 'prop-types';
 import Game from './Game';
 
 const Games = (props) => {
@@ -22,3 +23,7 @@ const Games = (props) => {
 }
 
 export default Games;
+
+Games.propTypes = {
+  games: PropTypes.array.isRequired,
+}

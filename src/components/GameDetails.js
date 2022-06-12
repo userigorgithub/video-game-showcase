@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '../styles/GameDetails.css';
-// import App from './App';
+import PropTypes from 'prop-types';
+import { fetchDataSingleGame } from '../apiCalls';
 import ErrorMessage from './ErrorMessage';
 
-
 class GameDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       game: '',
       error: false
@@ -14,32 +14,14 @@ class GameDetails extends Component {
   }
 
   componentDidMount = () => {
-  const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-		'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-	}
-};
-
-fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
-// fetch('https://mmo-games.p.rapidapi.com/game?id=452', options)
-	.then(response => {
-    if (response.ok) {
-      return response.json()
-    } else {
-      throw new Error(response.statusText)
-    }
-  })
-  .then(data => {
-    console.log('single game data', data)
-    return this.setState({ game: data })
-  })
-	.catch(error => {
-    this.setState({ error: true })
-  })
-}
-
+    fetchDataSingleGame(`/game?id=${this.props.id}`)
+      .then(data => {
+        return this.setState({ game: data })
+      })
+	    .catch(error => {
+      this.setState({ error: true })
+      })
+  }
 
   render() {
     if (this.state.error) {
@@ -65,3 +47,7 @@ fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
 }
 
 export default GameDetails;
+
+GameDetails.defaultProps = {
+  error: false
+}

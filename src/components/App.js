@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import PropTypes from 'prop-types';
 import Games from './Games';
-// import gameData from '../data';
-// import { fetchData } from '../apiCalls';
+import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorMessage from './ErrorMessage';
 import { Route, Switch } from 'react-router-dom';
-
 
 class App extends Component {
   constructor() {
@@ -22,39 +21,14 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    const options = {
-	    method: 'GET',
-	    headers: {
-		    'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-		    'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-	    }
-    };
-    fetch('https://mmo-games.p.rapidapi.com/games', options)
-	    .then(response => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          throw new Error(response.statusText)
-        }
-      })
+    fetchData('/')
       .then(data => {
-      console.log('games data', data)
-      return this.setState({ games: data })
-    })
+        return this.setState({ games: data })
+      })
       .catch(error => {
         this.setState({ error: true })
       })
   }
-
-  // componentDidMount = () => {
-    // fetchData()
-    // .then(response => response.json())
-    // .then(data => this.setState({games: data.games}))
-
-
-    // this.setState({games: gameData.games})
-    // console.log("games", gameData.games);
-  // }
 
   searchGame = (event) => {
     const result = this.state.games.filter(game => {
@@ -97,3 +71,7 @@ class App extends Component {
 }
 
 export default App;
+
+App.defaultProps = {
+  error: false
+}

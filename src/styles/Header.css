@@ -1,26 +1,10 @@
 .header {
-  /* border: solid black 1px; */
   background-color: #D3D3D3;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
 }
-
-/* .home-btn-area,
-.title-area,
-.search-area {
-  width: 30vw;
-  display: flex;
-  align-items: center;
-} */
-
-/* .home-btn,
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .home-btn {
   background-color: #000000;

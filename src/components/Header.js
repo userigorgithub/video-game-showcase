@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
@@ -22,6 +23,10 @@ const Header = (props) => {
   )
 }
 
-
-
 export default Header;
+
+Header.propTypes = {
+  clearSearchGame: PropTypes.func.isRequired,
+  searchGame: PropTypes.func.isRequired,
+  query: PropTypes.string.isRequired
+}

@@ -1,32 +1,37 @@
+const fetchData = () => {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
+      'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
+    }
+  };
+  return fetch('https://mmo-games.p.rapidapi.com/games', options)
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        throw new Error(response.statusText)
+      }
+    })
+}
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-// 		'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-// 	}
-// };
-//
-// fetch('https://mmo-games.p.rapidapi.com/games', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
+const fetchDataSingleGame = (path) => {
+  const options = {
+  	method: 'GET',
+  	headers: {
+  		'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
+  		'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
+  	}
+  };
+  return fetch(`https://mmo-games.p.rapidapi.com/game?id=${path}`, options)
+	  .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        throw new Error(response.statusText)
+      }
+    })
+}
 
-// export { fetchData };
-
-
-
-
-
-// const fetchData = () => {
-//   return fetch(`https://www.mmobomb.com/api1/games`,
-//     {
-//       mode: 'cors',
-//       headers: {
-//         'Access-Control-Allow-Origin':'*'
-//       }
-//     }
-//   )
-// }
-//
-// export { fetchData };
+export { fetchData, fetchDataSingleGame };
