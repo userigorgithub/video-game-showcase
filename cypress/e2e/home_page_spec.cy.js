@@ -38,7 +38,7 @@ describe('Home page', () => {
     cy.get('.titles').should('contain', 'Dauntless')
   });
 
-  it.only('should be able to display a home page with a footer which has some information', () => {
+  it('should be able to display a home page with a footer which has some information', () => {
     cy.get('.footer').should('exist')
     cy.get('.developer').should('exist')
     cy.get('.school').should('exist')
