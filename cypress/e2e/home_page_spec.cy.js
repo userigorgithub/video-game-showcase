@@ -21,8 +21,8 @@ describe('Home page', () => {
     cy.get('.search').should('have.attr', 'placeholder').should('include', 'search by title')
   });
 
-  it('should be able to display a live search for a desired game', () => {
-    cy.get('.search').type('dauntless')
+  it.only('should be able to display a live search for a desired game', () => {
+    cy.get('.search').type('Dauntless')
     cy.get('.games').children().should('have.length', 1)
     cy.get('.titles').should('contain', 'Dauntless')
   });
