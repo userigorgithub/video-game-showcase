@@ -1,0 +1,10 @@
+.game-details {
+  background-color: rgba(211, 211, 211, 0.8);
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .game-details-short-description {
+    font-size: 15px;
+  }
+}

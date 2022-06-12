@@ -1,0 +1,12 @@
+.footer {
+  background-color: #D3D3D3;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+  }
+}
