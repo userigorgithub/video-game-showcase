@@ -1,0 +1,8 @@
+.games {
+  /* border: solid black 1px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-left: 10px;
+  margin-right: 25px;
+}

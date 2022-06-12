@@ -1,5 +1,6 @@
 .error-message {
-  background-color: #D3D3D3;
+  height: 70vh;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
