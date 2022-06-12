@@ -1,72 +1,73 @@
-README.md GitHub connection test.
+# Video Game Showcase
 
-# Getting Started with Create React App
+## Table of Contents
+- [Contributors](#contributor(s))
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Deployed Link](#deployed-link)
+- [Learning Goals](#learning-goals)
+- [Features](#features)
+- [Project Demo](#project-demo)
+- [Future Extensions](#possible-future-extensions)
+- [Set Up](#set-up)
+- [Project Spec](#project-spec)
+- [GitHub Repo](#github-repo)
+- [Additional Resources](#additional-resources)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contributor(s)
+[Igor Decess](https://github.com/userigorgithub)
 
-## Available Scripts
+## Introduction
+Find an amazing MMO (massively multiplayer online) game and read information about it! No time to scroll through all games? Use search feature to find that game faster. What is your favorite game?
 
-In the project directory, you can run:
+Video Game Showcase was a solo project of [Turing School of Software and Design](https://turing.edu/) that gave an opportunity to strengthen knowledge of React, Router, and Cypress E2E testing.
 
-### `npm start`
+## Technologies
+- React
+- Router
+- HTML
+- CSS
+- Cypress
+- Fetch API
+- Webpack
+- NPM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployed Link
+- Use an app right [here]()!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Learning Goals
+- Learning how to use React and Router libraries
+- Learning how to use Cypress end-to-end testing library
 
-### `npm test`
+## Features
+- Upon page load, the user will be presented with many MMO games
+- A user can search for a specific game
+- When user clicks on a game, they are taken to a page with that game
+- Users can read the details of a game
+- Users can utilize the forward/backward arrows to navigate their history on the site and can share a specific URL pertaining to each game
+- Responsive design when using a laptop, tablet, or phone
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Demo
+COMMING
 
-### `npm run build`
+## Possible Future Extensions
+- Create filtering functionality by MMO game type
+- Being able to favorite games
+- Inputing comments for each game
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Front End Set Up Instructions
+1. Fork and clone [this](https://github.com/userigorgithub/video-game-showcase) repo
+2. Type `cd video-game-showcase` to move into the root directory
+3. Run `npm install` to install necessary dependencies
+4. Run `npm start`
+5. Copy the url given by running `npm start` and copy it to your browser
+6. Explore the available games and see their details!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Spec
+- The spec for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project GitHub Repo
+- The project repo can be found [here](https://github.com/userigorgithub/video-game-showcase)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional Resources
+- API was provided by [MMOBomb](https://www.mmobomb.com/api)
