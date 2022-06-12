@@ -3,7 +3,7 @@ import '../styles/Games.css';
 import Game from './Game';
 
 const Games = (props) => {
-  const gameCards = props.allGames.map(game => {
+  const gameCards = props.games.map(game => {
     return (
       <Game
         id={game.id}

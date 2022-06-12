@@ -52,11 +52,11 @@ fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
             <p className='game-details-short-description'>Description: {this.state.game.short_description}</p>
             <p className='game-details-game-url'>Website: <a href={this.state.game.game_url} target='blank'>{this.state.game.game_url}</a></p>
             <p className='game-details-status'>Status: {this.state.game.status}</p>
-            <p className='game-details-title'>Genre: {this.state.game.genre}</p>
-            <p className='game-details-title'>Platform: {this.state.game.platform}</p>
-            <p className='game-details-title'>Publisher: {this.state.game.publisher}</p>
-            <p className='game-details-title'>Developer: {this.state.game.developer}</p>
-            <p className='game-details-title'>Release Date: {this.state.game.release_date}</p>
+            <p className='game-details-genre'>Genre: {this.state.game.genre}</p>
+            <p className='game-details-platform'>Platform: {this.state.game.platform}</p>
+            <p className='game-details-publisher'>Publisher: {this.state.game.publisher}</p>
+            <p className='game-details-developer'>Developer: {this.state.game.developer}</p>
+            <p className='game-details-release-date'>Release Date: {this.state.game.release_date}</p>
           </div>
         </div>
       )

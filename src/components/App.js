@@ -77,11 +77,11 @@ class App extends Component {
           <Switch>
             <Route exact path='/' render={() =>
               {if (!this.state.searchedGames.length && !this.state.query) {
-                return (<Games allGames={this.state.games} />)
+                return (<Games games={this.state.games} />)
               } else if (!this.state.searchedGames.length) {
                 return (<ErrorMessage />)
               } else {
-                return (<Games allGames={this.state.searchedGames} />)
+                return (<Games games={this.state.searchedGames} />)
               }}
             } >
             </Route>
