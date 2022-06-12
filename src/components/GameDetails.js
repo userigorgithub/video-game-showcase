@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/GameDetails.css';
 import PropTypes from 'prop-types';
+import { fetchDataSingleGame } from '../apiCalls';
 // import App from './App';
 import ErrorMessage from './ErrorMessage';
 
@@ -15,23 +16,7 @@ class GameDetails extends Component {
   }
 
   componentDidMount = () => {
-  const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-		'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-	}
-};
-
-fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
-// fetch('https://mmo-games.p.rapidapi.com/game?id=452', options)
-	.then(response => {
-    if (response.ok) {
-      return response.json()
-    } else {
-      throw new Error(response.statusText)
-    }
-  })
+  fetchDataSingleGame(`/game?id=${this.props.id}`)
   .then(data => {
     console.log('single game data', data)
     return this.setState({ game: data })
