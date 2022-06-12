@@ -3,7 +3,7 @@ import '../styles/App.css';
 import PropTypes from 'prop-types';
 import Games from './Games';
 // import gameData from '../data';
-// import { fetchData } from '../apiCalls';
+import { fetchData } from '../apiCalls';
 import GameDetails from './GameDetails';
 import Header from './Header';
 import Footer from './Footer';
@@ -23,23 +23,9 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    const options = {
-	    method: 'GET',
-	    headers: {
-		    'X-RapidAPI-Key': '9ed5acaa8fmshf12dc90a1184bd6p121c27jsna84ebf2de73e',
-		    'X-RapidAPI-Host': 'mmo-games.p.rapidapi.com'
-	    }
-    };
-    fetch('https://mmo-games.p.rapidapi.com/games', options)
-	    .then(response => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          throw new Error(response.statusText)
-        }
-      })
+    fetchData('/')
       .then(data => {
-      console.log('games data', data)
+      // console.log('games data', data)
       return this.setState({ games: data })
     })
       .catch(error => {
