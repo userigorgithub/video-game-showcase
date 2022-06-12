@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Game.css';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Game = (props) => {
@@ -16,3 +17,9 @@ const Game = (props) => {
 
 
 export default Game;
+
+Game.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired
+}

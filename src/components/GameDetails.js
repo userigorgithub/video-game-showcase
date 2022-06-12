@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/GameDetails.css';
+import PropTypes from 'prop-types';
 // import App from './App';
 import ErrorMessage from './ErrorMessage';
 
 
 class GameDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       game: '',
       error: false
@@ -65,3 +66,7 @@ fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
 }
 
 export default GameDetails;
+
+GameDetails.defaultProps = {
+  error: false
+}

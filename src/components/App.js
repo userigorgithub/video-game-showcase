@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import PropTypes from 'prop-types';
 import Games from './Games';
 // import gameData from '../data';
 // import { fetchData } from '../apiCalls';
@@ -97,3 +98,7 @@ class App extends Component {
 }
 
 export default App;
+
+App.defaultProps = {
+  error: false
+}
