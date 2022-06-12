@@ -48,7 +48,7 @@ fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
       return (
         <div className='game-img' style={{backgroundImage: `url(${this.state.game.thumbnail})`}} src={this.state.game.thumbnail} alt={this.state.game.title}>
           <div className='game-details'>
-            <h2 className='game-details-title'>Title: {this.state.game.title}</h2>
+            <h3 className='game-details-title'>Title: {this.state.game.title}</h3>
             <p className='game-details-short-description'>Description: {this.state.game.short_description}</p>
             <p className='game-details-game-url'>Website: <a href={this.state.game.game_url} target='blank'>{this.state.game.game_url}</a></p>
             <p className='game-details-status'>Status: {this.state.game.status}</p>
@@ -57,7 +57,6 @@ fetch(`https://mmo-games.p.rapidapi.com/game?id=${this.props.id}`, options)
             <p className='game-details-title'>Publisher: {this.state.game.publisher}</p>
             <p className='game-details-title'>Developer: {this.state.game.developer}</p>
             <p className='game-details-title'>Release Date: {this.state.game.release_date}</p>
-
           </div>
         </div>
       )
