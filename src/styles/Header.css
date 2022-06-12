@@ -1,6 +1,6 @@
 .header {
   /* border: solid black 1px; */
-  background-color: lightgray;
+  background-color: #D3D3D3;
   display: flex;
   justify-content: space-around;
   align-items: center;
