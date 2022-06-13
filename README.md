@@ -31,9 +31,10 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 - Fetch API
 - Webpack
 - NPM
+- Heroku
 
 ## Deployed Link
-- Use an app right [here]()!
+- Use an app right [HERE](https://video-game-showcase.herokuapp.com/)!
 
 ## Learning Goals
 - Learning how to use React and Router libraries
@@ -48,7 +49,11 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 - Responsive design when using a laptop, tablet, or phone
 
 ## Project Demo
-COMMING
+![Screen Shot 2022-06-12 at 6 37 50 PM](https://user-images.githubusercontent.com/87003746/173260507-48a523d9-5620-4f15-8312-bf1ff44d0c92.png)
+
+![Screen Shot 2022-06-12 at 6 37 34 PM](https://user-images.githubusercontent.com/87003746/173260550-2f2ebbe1-8842-4f54-ad68-1e755bb0c88a.png)
+
+![Screen Shot 2022-06-12 at 6 36 17 PM](https://user-images.githubusercontent.com/87003746/173260612-975c794a-4df8-48cb-944b-cf7d8f37330c.png)
 
 ## Possible Future Extensions
 - Create filtering functionality by MMO game type
