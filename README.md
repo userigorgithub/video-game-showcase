@@ -31,6 +31,7 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 - Fetch API
 - Webpack
 - NPM
+- Heroku
 
 ## Deployed Link
 - Use an app right [HERE](https://video-game-showcase.herokuapp.com/)!
