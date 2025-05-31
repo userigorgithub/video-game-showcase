@@ -6,18 +6,26 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
   return (
     <div className='header'>
-      <div className='home-btn-area'>
+      <div className='title-area'>
         <Link to='/'>
-          <button className='home-btn' onClick={() => props.clearSearchGame()}>Home</button>
+          <h1>
+            <span className='red-letter'>V</span>ideo 
+            <span className='red-letter'>G</span>ame 
+            <span className='red-letter'>S</span>howcase
+          </h1>
         </Link>
       </div>
-      <div className='title-area'>
-        <h1>Video Game Showcase</h1>
-      </div>
-      <div className='search-area'>
-        <form>
-          <input className='search' type='text' placeholder='search by title' value={props.query} onChange={(event) => props.searchGame(event)}></input>
-        </form>
+      <div className='right-section'>
+        <div className='home-btn-area'>
+          <Link to='/'>
+            <button className='home-btn' onClick={() => props.clearSearchGame()}>Home</button>
+          </Link>
+        </div>
+        <div className='search-area'>
+          <form>
+            <input className='search' type='text' placeholder='search by title' value={props.query} onChange={(event) => props.searchGame(event)}></input>
+          </form>
+        </div>
       </div>
     </div>
   )
