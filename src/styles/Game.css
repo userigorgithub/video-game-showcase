@@ -1,13 +1,27 @@
 .game {
   box-sizing: border-box;
+  background-color: #D3D3D3;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.game:hover {
+  transform: scale(1.03);
+  transition: 900ms;
 }
 
 .titles {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .thumbnails {
   object-fit: contain;
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
