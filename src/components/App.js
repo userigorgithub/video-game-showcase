@@ -7,6 +7,7 @@ import GameDetails from './GameDetails';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorMessage from './ErrorMessage';
+import BackToTopButton from './BackToTopButton';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -63,6 +64,7 @@ class App extends Component {
               <GameDetails id={match.params.id} /> } >
             </Route>
           </Switch>
+          <BackToTopButton />
           <Footer />
         </main>
       )
