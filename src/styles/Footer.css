@@ -2,6 +2,21 @@
   background-color: #D3D3D3;
   display: flex;
   justify-content: space-around;
+  box-shadow: 0px 8px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.developer a,
+.school a,
+.resources a {
+  color: blue;
+  transition: background-color 1s ease;
+}
+
+.developer a:hover,
+.school a:hover,
+.resources a:hover {
+  background-color: yellow;
+  color: red;
 }
 
 @media screen and (max-width: 700px) {
