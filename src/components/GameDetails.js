@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/GameDetails.css';
-import PropTypes from 'prop-types';
 import { fetchDataSingleGame } from '../apiCalls';
 import ErrorMessage from './ErrorMessage';
 
@@ -47,7 +46,3 @@ class GameDetails extends Component {
 }
 
 export default GameDetails;
-
-GameDetails.defaultProps = {
-  error: false
-}
