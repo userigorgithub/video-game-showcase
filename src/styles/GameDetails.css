@@ -1,6 +1,27 @@
+.game-img {
+  min-height: 65vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .game-details {
   background-color: rgba(211, 211, 211, 0.8);
   text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  max-width: 600px;
+}
+
+.game-details-game-url a {
+  color: blue;
+  transition: background-color 1s ease;
+}
+
+.game-details-game-url a:hover {
+  background-color: yellow;
+  color: red;
 }
 
 @media screen and (max-width: 700px) {
