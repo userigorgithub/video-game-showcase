@@ -9,9 +9,8 @@
 - [Features](#features)
 - [Project Demo](#project-demo)
 - [Future Extensions](#possible-future-extensions)
-- [Set Up](#set-up)
+- [Set Up](#set-up-instructions)
 - [Project Spec](#project-spec)
-- [GitHub Repo](#github-repo)
 - [Additional Resources](#additional-resources)
 
 ## Contributors
@@ -25,16 +24,16 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 ## Technologies
 - React
 - Router
+- JavaScript
 - HTML
 - CSS
 - Cypress
 - Fetch API
-- Webpack
 - NPM
-- Heroku
+- Vercel
 
 ## Deployed Link
-- Use an app right [HERE](https://video-game-showcase.herokuapp.com/)!
+- Deployed application right [HERE](https://video-game-showcase.vercel.app/)!
 
 ## Learning Goals
 - Learning how to use React and Router libraries
@@ -46,21 +45,26 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 - When user clicks on a game, they are taken to a page with that game
 - Users can read the details of a game
 - Users can utilize the forward/backward arrows to navigate their history on the site and can share a specific URL pertaining to each game
+- Go to the top button when user scrolls down
 - Responsive design when using a laptop, tablet, or phone
 
 ## Project Demo
-![Screen Shot 2022-06-12 at 6 37 50 PM](https://user-images.githubusercontent.com/87003746/173260507-48a523d9-5620-4f15-8312-bf1ff44d0c92.png)
 
-![Screen Shot 2022-06-12 at 6 37 34 PM](https://user-images.githubusercontent.com/87003746/173260550-2f2ebbe1-8842-4f54-ad68-1e755bb0c88a.png)
+Home page:
+![Screenshot1](./public/Screenshot1.png)
 
-![Screen Shot 2022-06-12 at 6 36 17 PM](https://user-images.githubusercontent.com/87003746/173260612-975c794a-4df8-48cb-944b-cf7d8f37330c.png)
+Search feature:
+![Screenshot2](./public/Screenshot2.png)
+
+Game Details page:
+![Screenshot3](./public/Screenshot3.png)
 
 ## Possible Future Extensions
 - Create filtering functionality by MMO game type
 - Being able to favorite games
 - Inputing comments for each game
 
-## Front End Set Up Instructions
+## Set Up Instructions
 1. Fork and clone [this](https://github.com/userigorgithub/video-game-showcase) repo
 2. Type `cd video-game-showcase` to move into the root directory
 3. Run `npm install` to install necessary dependencies
@@ -70,9 +74,6 @@ Video Game Showcase was a solo project of [Turing School of Software and Design]
 
 ## Project Spec
 - The spec for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
-
-## Project GitHub Repo
-- The project repo can be found [here](https://github.com/userigorgithub/video-game-showcase)
 
 ## Additional Resources
 - API was provided by [MMOBomb](https://www.mmobomb.com/api)
